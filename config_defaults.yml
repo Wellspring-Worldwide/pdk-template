@@ -573,23 +573,23 @@ Gemfile:
         version: '~> 6.2.4'
       - gem: beaker-vagrant
         version: '~> 0.5.0'
-.gitlab-ci.yml:
-  defaults:
-    cache:
-      paths:
-        - 'vendor/bundle'
-    bundler_args: '--without system_tests --path vendor/bundle --jobs $(nproc)'
-    ruby_versions:
-      '2.1.9':
-        checks:
-          - parallel_spec
-        puppet_version: '~> 4.0'
-      '2.4.4':
-        checks:
-          - 'syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop'
-          - parallel_spec
-        puppet_version: '~> 5.5'
-    # beaker: true
+#.gitlab-ci.yml:
+#  defaults:
+#    cache:
+#      paths:
+#        - 'vendor/bundle'
+#    bundler_args: '--without system_tests --path vendor/bundle --jobs $(nproc)'
+#    ruby_versions:
+#      '2.1.9':
+#        checks:
+#          - parallel_spec
+#        puppet_version: '~> 4.0'
+#      '2.4.4':
+#        checks:
+#          - 'syntax lint metadata_lint check:symlinks check:git_ignore check:dot_underscore check:test_file rubocop'
+#          - parallel_spec
+#        puppet_version: '~> 5.5'
+#    # beaker: true
 spec/default_facts.yml:
   ipaddress: "172.16.254.254"
   is_pe: false
