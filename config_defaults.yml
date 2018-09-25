@@ -596,4 +596,5 @@ spec/default_facts.yml:
   is_pe: false
   macaddress: "AA:AA:AA:AA:AA:AA"
 spec/spec_helper.rb:
+  hiera_config: "spec/hiera/hiera.yaml"
   strict_level: ":warning"
