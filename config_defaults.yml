@@ -568,7 +568,7 @@ Gemfile:
       - gem: beaker-puppet
         version: '~> 1.6.0'
       - gem: beaker-hostgenerator
-        version: '~> 1.6.0'
+        version: '~> 1.1.16'
       - gem: beaker-rspec
         version: '~> 6.2.4'
       - gem: beaker-vagrant
