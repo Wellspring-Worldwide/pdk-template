@@ -529,6 +529,7 @@ Rakefile:
       configs: *default_configs
       enabled_cops: all
 Gemfile:
+  ruby-version: '2.5.1'
   required:
     ':development':
       - gem: fast_gettext
