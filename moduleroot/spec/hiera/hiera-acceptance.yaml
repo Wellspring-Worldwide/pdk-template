@@ -1,10 +1,12 @@
 ---
-:backends:
+version: 5
+defaults:
+  datadir: 'spec/hiera/data'
+  data_hash: yaml_data
+hierarchy:
+  - name: "environment"
+    path: "%{environment}"
+  - name: "common file"
+    path: common.yaml
+backends:
   - yaml
-:yaml:
-  :datadir: '/etc/puppetlabs/code/hieradata'
-:merge_behavior: deeper
-:hierarchy:
-  - "%{environment}"
-  - common
-
