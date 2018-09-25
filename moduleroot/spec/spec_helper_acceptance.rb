@@ -31,9 +31,8 @@ RSpec.configure do |c|
     end
     MODULES.each do |mname, mdir|
       module_path = File.expand_path(mdir.sub('#{source_dir}', PROJECT_ROOT))
-      module_name = mname.sub('#{MODULE_NAME}', MODULE_NAME)
       hosts.each do |host|
-        install_dev_puppet_module_on(host, :source => module_path, :module_name => module_name,
+        install_dev_puppet_module_on(host, :source => module_path, :module_name => MODULE_NAME,
                                      :target_module_path => '/etc/puppetlabs/code/modules')
       end
     end
