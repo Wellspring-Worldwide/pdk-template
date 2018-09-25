@@ -1,0 +1,29 @@
+# See http://serverspec.org/resource_types.html
+<% name = @configs['module_metadata']['name'].split('-').last rescue '[modulename]' -%>
+require 'spec_helper_acceptance'
+
+describe '<%= name %> module' do
+
+  context 'default parameters' do
+    # Using puppet_apply as a helper
+    it 'should work idempotently with no errors' do
+      pp = <<-EOS
+      class { "<%= name %>": }
+      EOS
+
+      # Run it twice and test for idempotency
+      apply_manifest(pp, :catch_failures => true)
+      apply_manifest(pp, :catch_changes  => true)
+    end
+
+    # describe package('<%= name %>') do
+    #   it { is_expected.to be_installed }
+    # end
+
+    # describe service('<%= name %>') do
+    #   it { is_expected.to be_enabled }
+    #   it { is_expected.to be_running }
+    # end
+
+  end
+end

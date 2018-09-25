@@ -1,0 +1,11 @@
+HOSTS:
+  centos-7-x64:
+    roles:
+      - master
+    platform: el-7-x86_64
+    image: wellspring-beaker-centos7
+    hypervisor: vagrant
+    box: centos/7
+CONFIG:
+  log_level: verbose
+  type: foss
