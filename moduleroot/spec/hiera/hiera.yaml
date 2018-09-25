@@ -8,5 +8,3 @@ hierarchy:
     path: "%{environment}"
   - name: "common file"
     path: common.yaml
-backends:
-  - yaml
