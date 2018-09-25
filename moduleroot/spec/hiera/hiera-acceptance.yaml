@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: '/etc/puppetlabs/code/hieradata'
+:merge_behavior: deeper
+:hierarchy:
+  - "%{environment}"
+  - common
+

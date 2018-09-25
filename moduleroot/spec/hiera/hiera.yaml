@@ -1,0 +1,10 @@
+---
+:backends:
+  - yaml
+:yaml:
+  :datadir: 'spec/hiera/data'
+:merge_behavior: deeper
+:hierarchy:
+  - "%{environment}"
+  - common
+
