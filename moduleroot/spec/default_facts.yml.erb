@@ -1,0 +1,12 @@
+# Use default_module_facts.yml for module specific facts.
+#
+# Facts specified here will override the values provided by rspec-puppet-facts.
+---
+concat_basedir: "<%= @configs['concat_basedir'] %>"
+ipaddress: "<%= @configs['ipaddress'] %>"
+is_pe: <%= @configs['is_pe'] %>
+macaddress: "<%= @configs['macaddress'] %>"
+<% if !@configs['extra_facts'].nil? -%>
+<% require 'yaml' -%>
+<%= @configs['extra_facts'].to_yaml[4..-1] %>
+<% end -%>

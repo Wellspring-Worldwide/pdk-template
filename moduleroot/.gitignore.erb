@@ -1,0 +1,3 @@
+<% (@configs['required'] + (@configs['paths'] || [])).uniq.each do |path| -%>
+<%= path %>
+<% end -%>
