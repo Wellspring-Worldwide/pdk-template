@@ -596,7 +596,8 @@ spec/default_facts.yml:
   is_pe: false
   macaddress: "AA:AA:AA:AA:AA:AA"
 spec/spec_helper.rb:
+  coverage: true
+  coverage_percentage: 100
   hiera_config: "spec/hiera/hiera.yaml"
   mock_with: ":rspec"
   strict_level: ":warning"
-  with_coverage: true
