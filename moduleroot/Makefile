@@ -9,4 +9,4 @@ acceptance: deps
 
 inspect: deps
 	bundle exec rake acceptance BEAKER_destroy=no;\
-	cd .vagrant/beaker_vagrant_files/default.yml;
+	cd .vagrant/beaker_vagrant_files/default.yml && vagrant ssh;
