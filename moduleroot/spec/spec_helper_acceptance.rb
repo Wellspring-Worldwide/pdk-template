@@ -7,7 +7,7 @@ require 'spec_helper_constants.rb'
 RSpec.configure do |c|
 
   hosts.each do |host|
-    shell('rpm -Uvh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm')
+    shell('rpm -Uvh https://yum.puppetlabs.com/puppet6/el/7/x86_64/puppet-release-1.0.0-3.el7.noarch.rpm')
     shell('yum -y install puppet')
     shell('rm -rf /etc/puppetlabs/code/hiera*')
     scp_to(host, File.join(HIERA_ROOT, 'hiera-acceptance.yaml'), '/etc/puppetlabs/code/hiera.yaml')
