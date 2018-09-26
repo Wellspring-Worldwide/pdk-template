@@ -529,7 +529,8 @@ Rakefile:
       configs: *default_configs
       enabled_cops: all
 Gemfile:
-  ruby-version: '2.5.1'
+  ruby_version: '2.5.1'
+  puppet_gem_version: '~> 5'
   required:
     ':development':
       - gem: fast_gettext

@@ -45,7 +45,7 @@ RSpec.configure do |c|
   <%- end -%>
   <%- if @configs['coverage'] -%>
   c.after(:suite) do
-    RSpec::Puppet::Coverage.report!<%- if @configs['coverage_percentage'] -%>(<%= @configs['coverage_percentage'] %>)<%- end %>
+    RSpec::Puppet::Coverage.report!<%- if @configs['coverage_percentage'] -%>(<%= @configs['coverage_percentage'] %>)<% end -%>
   end
   <%- end -%>
 end
