@@ -600,7 +600,7 @@ spec/spec_helper.rb:
   coverage: true
   coverage_percentage: 100
   hiera_config: "spec/hiera/hiera-unit.yaml"
-  mock_with: ":rspec"
+  mock_with: ":mocha"
   strict_level: ":warning"
 spec/spec_helper_acceptance.rb:
   puppet_release_rpm_url: "https://yum.puppetlabs.com/puppet5/el/7/x86_64/puppet5-release-5.0.0-4.el7.noarch.rpm"
