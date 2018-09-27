@@ -33,6 +33,8 @@
       - '.DS_Store'
 .pdkignore:
   required: *ignorepaths
+      - '/spec/acceptance/'
+      - '/spec/hiera/data/'
 #.travis.yml:
 #  ruby_versions:
 #    - 2.5.0
