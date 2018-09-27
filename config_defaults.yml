@@ -602,3 +602,5 @@ spec/spec_helper.rb:
   hiera_config: "spec/hiera/hiera-unit.yaml"
   mock_with: ":rspec"
   strict_level: ":warning"
+spec/spec_helper_acceptance.rb:
+  puppet_release_rpm_url: "https://yum.puppetlabs.com/puppet5/el/7/x86_64/puppet5-release-5.0.0-4.el7.noarch.rpm"
