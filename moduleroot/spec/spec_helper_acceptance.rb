@@ -3,7 +3,6 @@ require 'beaker-rspec/helpers/serverspec'
 require 'beaker-rspec/spec_helper'
 require 'spec_helper_constants.rb'
 
-
 RSpec.configure do |c|
 
   hosts.each do |host|
