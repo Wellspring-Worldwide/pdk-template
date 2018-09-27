@@ -599,6 +599,6 @@ spec/default_facts.yml:
 spec/spec_helper.rb:
   coverage: true
   coverage_percentage: 100
-  hiera_config: "spec/hiera/hiera.yaml"
+  hiera_config: "spec/hiera/hiera-unit.yaml"
   mock_with: ":rspec"
   strict_level: ":warning"
