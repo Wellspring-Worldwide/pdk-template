@@ -1,5 +1,6 @@
+<% name = @configs['module_metadata']['name'].split('-').last rescue '[modulename]' %>
 HOSTS:
-  vagrant-host01-local-ww00.wellspringworldwide.com:
+  vagrant-<%= name %>01-local-ww00.wellspringworldwide.com:
     roles:
       - master
     platform: el-7-x86_64
