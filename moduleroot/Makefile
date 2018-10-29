@@ -3,6 +3,7 @@ clean:
 	$(MAKE) vagrant-destroy
 
 deps:
+	mkdir -p ./log
 	bundle install >> ./log/bundle_install.log
 
 test: deps
