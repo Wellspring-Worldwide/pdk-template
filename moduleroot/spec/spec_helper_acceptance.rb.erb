@@ -8,6 +8,7 @@ RSpec.configure do |c|
   hosts.each do |host|
     shell('rpm -Uvh <%= @configs['puppet_release_rpm_url'] %>')
     shell('yum -y install puppet')
+    shell('/opt/puppetlabs/puppet/bin/gem install hiera-eyaml-gpg ruby_gpg --no-ri --no-rdoc')
     shell('rm -rf /etc/puppetlabs/code/hiera*')
     scp_to(host, File.join(HIERA_ROOT, 'hiera-acceptance.yaml'), '/etc/puppetlabs/code/hiera.yaml')
     scp_to(host, File.join(HIERA_ROOT, 'data'), '/etc/puppetlabs/code/hieradata')
