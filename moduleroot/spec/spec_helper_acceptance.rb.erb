@@ -42,13 +42,16 @@ RSpec.configure do |c|
     if ! FORGE_MODULES.empty?
       hosts.each do |host|
         FORGE_MODULES.each do |name, forge_name|
-          on host, puppet('module', 'install', forge_name), { :acceptable_exit_codes => [0,1] }
           mpath = File.expand_path(name, "#{PROJECT_ROOT}/spec/fixtures/modules")
           if File.directory?(mpath)
             install_dev_puppet_module_on(host, :source => mpath, :module_name => name,
                                          :target_module_path => '/etc/puppetlabs/code/modules')
           else
-            on host, puppet('module', 'install', forge_name), { :acceptable_exit_codes => [0,1] }
+            version = ""
+            if ! forge_name['ref'].nil?
+              version = "--version=#{forge_name['ref']}"
+            end
+            on host, puppet('module', 'install', forge_name['repo'], version), { :acceptable_exit_codes => [0,1] }
           end
         end
       end
