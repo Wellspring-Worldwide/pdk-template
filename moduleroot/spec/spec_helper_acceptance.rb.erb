@@ -47,11 +47,9 @@ RSpec.configure do |c|
             install_dev_puppet_module_on(host, :source => mpath, :module_name => name,
                                          :target_module_path => '/etc/puppetlabs/code/modules')
           else
-            version = ""
-            if ! forge_name['ref'].nil?
-              version = "--version=#{forge_name['ref']}"
-            end
-            on host, puppet('module', 'install', forge_name['repo'], version), { :acceptable_exit_codes => [0,1] }
+            version = forge_name['ref'].nil? ? "" : "--version=#{forge_name['ref']}"
+            fname = forge_name['repo'].nil? ? forge_name : forge_name['repo']
+            on host, puppet('module', 'install', fname, version), { :acceptable_exit_codes => [0,1] }
           end
         end
       end
