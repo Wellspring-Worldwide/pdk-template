@@ -91,6 +91,18 @@ Rakefile:
   default_disabled_lint_checks:
     - 'relative'
   extras:
+    - 'exclude_paths = ['
+    - '  "spec/**/*",'
+    - ']'
+    - ""
+    - 'Rake::Task[:lint].clear'
+    - 'PuppetLint.configuration.fail_on_warnings = true'
+    - 'PuppetLint::RakeTask.new :lint do |config|'
+    - '  config.ignore_paths = exclude_paths'
+    - 'end'
+    - ""
+    - 'PuppetSyntax.exclude_paths = exclude_paths'
+    - ""
     - 'desc "Run acceptance tests"'
     - "RSpec::Core::RakeTask.new(:acceptance) do |t|"
     - "  t.pattern = 'spec/acceptance'"
