@@ -4,3 +4,5 @@ spec/hiera/data/unit.yaml:
   unmanaged: true
 spec/acceptance/default_spec.rb:
   unmanaged: true
+spec/default_facts.yml:
+  unmanaged: true
