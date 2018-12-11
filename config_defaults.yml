@@ -576,6 +576,8 @@ Gemfile:
           - mswin
           - mingw
           - x64_mingw
+      - gem: 'gpgme'
+        version: '~> 2.0'
     ':system_tests':
       - gem: beaker
         version: '~> 4.0'
