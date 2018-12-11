@@ -1,10 +1,6 @@
-metadata.json:
+spec/hiera/data/acceptance.yaml:
   unmanaged: true
-spec/hiera/data/*:
-  unmanaged: true
-spec/classes/*:
-  unmanaged: true
-spec/unit/*:
+spec/hiera/data/unit.yaml:
   unmanaged: true
 spec/acceptance/default_spec.rb:
   unmanaged: true

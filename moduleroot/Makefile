@@ -6,6 +6,9 @@ deps:
 	mkdir -p ./log
 	bundle install >> ./log/bundle_install.log
 
+update: deps
+	cp metadata.json{,~}; pdk update; mv metadata.json{~,}
+
 test: deps
 	bundle exec rake test
 
