@@ -1,0 +1,10 @@
+metadata.json:
+  unmanaged: true
+spec/hiera/data/*:
+  unmanaged: true
+spec/classes/*:
+  unmanaged: true
+spec/unit/*:
+  unmanaged: true
+spec/acceptance/default_spec.rb:
+  unmanaged: true
