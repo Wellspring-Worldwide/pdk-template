@@ -588,7 +588,7 @@ Gemfile:
       - gem: beaker-rspec
         version: '~> 6.2.4'
       - gem: beaker-vagrant
-        version: '~> 0.5.0'
+        version: '~> 0.6.2'
 #.gitlab-ci.yml:
 #  defaults:
 #    cache:
