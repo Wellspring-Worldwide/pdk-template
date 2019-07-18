@@ -1,3 +1,5 @@
+include ../../etc/makefiles/*.mk
+
 clean:
 	rm -rf ./log ./junit ./spec/fixtures/*;\
 	$(MAKE) vagrant-destroy
