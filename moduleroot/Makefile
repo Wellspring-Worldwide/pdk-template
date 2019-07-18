@@ -8,6 +8,9 @@ deps:
 	mkdir -p ./log
 	bundle install >> ./log/bundle_install.log
 
+docs:
+	find {manifests,lib,types} -type f -name "*.pp" -o -name "*.rb" | xargs | puppet strings generate --format markdown;
+
 update: deps
 	cp metadata.json{,~}; pdk update; mv metadata.json{~,}
 
